@@ -1,0 +1,49 @@
+﻿@using CyberShoppe.Models;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Products</title>
+</head>
+<body>
+
+    @foreach (Product product in Model)
+    {
+
+        <table>
+            <tr>
+                <td>
+                    <a href="ProductDescription?id=@product.Product_Id">
+
+                        <img alt="@product.Product_Id" height="100" width="100" src="data:image/jpg;base64,@Convert.ToBase64String(product.P_Image)" />
+                    </a>
+
+                </td>
+
+                <br />
+                <td>
+                    @product.Model_Name
+                </td>
+                <br />
+                <td>
+                    @product.Unit_Cost
+                </td>
+                <br />
+                @*<td>
+                    @product.P_Description
+                </td>*@
+                <br />
+
+            </tr>
+
+        </table>
+
+    }
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+﻿@model CyberShoppe.Models.Customer
+
+@{
+    ViewBag.Title = "Insert";
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Website CSS style -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Website Font style -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+    <title>Admin</title>
+    <link href="~/Content/InsertStyle.css" rel="stylesheet" />
+    <script src="~/Scripts/Insert.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <div class="row main">
+            <div class="main-login main-center">
+                <h5>Sign up once and experience the true feel of shopping!</h5>
+                <form class="" method="post">
+
+                    <div class="form-group">
+                        <label class="cols-sm-2 control-label">Your Name</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="Full_Name" id="Full_Name" placeholder="Enter your Full Name" autocomplete="off" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="cols-sm-2 control-label">Your Email</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                <input type="email" class="form-control" name="Email" id="Email" placeholder="Enter your Email" autocomplete="off" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="cols-sm-2 control-label">Password</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                <input type="password" class="form-control" name="Password" id="Password" placeholder="Enter your Password" autocomplete="off" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="cols-sm-2 control-label">Mobile Number</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone" aria-hidden="true"></i></span>
+                                <input type="tel" class="form-control" name="Mobile_No" id="Mobile_No" placeholder="Enter your Mobile number" autocomplete="off" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="cols-sm-2 control-label">Delivery Address</label>
+                        <div class="cols-sm-10">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-inbox" aria-hidden="true"></i></span>
+                                <input type="text" class="form-control" name="Delivery_Address" id="Delivery_Address" placeholder="Enter your Address" autocomplete="off" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="color:red; border-spacing:inherit; border-color:azure; background-color:lightskyblue">
+                        @if (IsPost && @ViewData["errorMsg"] != null)
+                        {
+                            foreach (var item in (List<string>)ViewData["errorMsg"])
+                            {
+                                <p>@item</p>
+                            }
+                        }
+                    </div>
+
+                    <div class="form-group">
+                        <input id="submitbtn" type="submit" value="SignUp" class="btn btn-default" />
+                    </div>
+                    <div class="form-group">
+                        <a href="Login">Back to Login Page</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+
+    @*<script>
+            $(document).ready(function () {
+                $("#submitbtn").on("click", function () {
+                    alert('Registration Successfull');
+                });
+            });
+        </script>*@
+
+</body>
+</html>
+
+
+<link href="~/Content/InsertStyle.css" rel="stylesheet" />
+
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+

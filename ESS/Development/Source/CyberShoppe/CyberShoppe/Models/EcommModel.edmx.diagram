@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="941eb4d7d2c34bbaa9edb538493671bc" Name="Diagram1">
+        <EntityTypeShape EntityType="Aug_MIPLModel.Category" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="Aug_MIPLModel.Customer" Width="1.5" PointX="5.25" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Aug_MIPLModel.Order" Width="1.5" PointX="7.5" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Aug_MIPLModel.Product" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="Aug_MIPLModel.ShoppingCart" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Aug_MIPLModel.OrderDetail" Width="1.5" PointX="9.75" PointY="2.75" IsExpanded="true" />
+        <AssociationConnector Association="Aug_MIPLModel.FK__Products__Catego__5D784BAE" ManuallyRouted="false" />
+        <AssociationConnector Association="Aug_MIPLModel.FK__Orders__Customer__6054B859" ManuallyRouted="false" />
+        <AssociationConnector Association="Aug_MIPLModel.FK__OrderDeta__Order__63312504" ManuallyRouted="false" />
+        <AssociationConnector Association="Aug_MIPLModel.FK__Orders__Cart_Id__5F609420" ManuallyRouted="false" />
+        <AssociationConnector Association="Aug_MIPLModel.FK__OrderDeta__Produ__6425493D" ManuallyRouted="false" />
+        <AssociationConnector Association="Aug_MIPLModel.FK__ShoppingC__Produ__5E6C6FE7" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Aug_MIPLModel.Admin" Width="1.5" PointX="0.75" PointY="6.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

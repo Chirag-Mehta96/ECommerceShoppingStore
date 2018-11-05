@@ -1,0 +1,50 @@
+﻿@using CyberShoppe.Models;
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ShowData</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="~/Content/Products.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container body-content">
+        <div class="row" style="position:relative;">
+            @foreach (Product product in Model)
+            {
+                <div class="col-md-4">
+                    <figure class="card card-product">
+                        <div class="img-wrap">
+                            <img alt="@product.Product_Id" height="250" width="150" src="data:image/jpg;base64,@Convert.ToBase64String(product.P_Image)" />
+                        </div>
+
+                        <figcaption class="info-wrap">
+                            @product.Model_Name
+                            <div class="rating-wrap">
+                                <div class="label-rating">132 reviews</div>
+                                <div class="label-rating">154 orders </div>
+                            </div> <!-- rating-wrap.// -->
+                        </figcaption>
+                        <div class="bottom-wrap">
+                            <a href="ProductDescription?id=@product.Product_Id" class="btn btn-sm btn-primary float-right">Order Now</a>
+                            <div class="price-wrap h5">
+                                <span class="price-new">@product.Unit_Cost</span> <del class="price-old">@product.Unit_Cost</del>
+                            </div> <!-- price-wrap.// -->
+                        </div>
+                        <div>
+                            @product.P_Description
+                        </div><!-- bottom-wrap.// -->
+                    </figure>
+                </div>
+            }
+        </div>
+       </div>
+</body>
+</html>
